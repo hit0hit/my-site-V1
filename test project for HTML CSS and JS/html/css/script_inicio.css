@@ -1,0 +1,140 @@
+* {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.7fr 1.1fr 1.1fr 1.1fr;
+    grid-template-rows: 0.1fr 2fr 0fr 0fr;
+    grid-template-areas: "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar conteudo1 conteudo2 conteudo3"
+        "sidebar footer footer footer";
+
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #23232e;
+    height: 6vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+#nav {
+
+    background-color: #23232e;
+    grid-area: nav;
+    padding: 0px;
+
+
+}
+
+#main {
+    grid-area: main;
+    border-radius: 0.9em;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    border-radius: 0.9em;
+}
+
+#conteudo1 {
+
+    grid-area: conteudo1;
+    border-radius: 0.9em;
+}
+
+#conteudo2 {
+
+    grid-area: conteudo2;
+    border-radius: 0.9em;
+}
+
+#conteudo3 {
+
+    grid-area: conteudo3;
+    border-radius: 0.9em;
+}
+
+#footer {
+
+    grid-area: footer;
+    border-radius: 0.9em;
+}
+
+.nome_perfil {
+    font-size: 30px;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: var(--color-avatar-bg);
+    border-radius: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 1pxvar(--color-avatar-border);
+
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:haver {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+
+        grid-area: auto;
+        padding-block-end: 10%;
+        grid-template-columns: 0.7fr 1.1fr;
+        grid-template-rows: 0.1fr 2fr;
+        grid-template-areas: "nav nav nav"
+            "sidebar sidebar sidebar"
+            "main main main";
+    }
+
+    #nav {
+        grid-area: auto;
+        justify-content: space-between;
+    }
+
+    .nav-list li {
+        letter-spacing: 100%px;
+        margin-left: 0px;
+    }
+}
